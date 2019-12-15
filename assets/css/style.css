@@ -1,0 +1,12 @@
+body {
+  background-image: url("/assets/images/memphis-mini.png");
+  background-repeat: repeat;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #4aaaa5;
+  font-family: "Georgia", Times, Times New Roman, serif;
+}
+
+/* Background pattern from Toptal Subtle Patterns */
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,15 @@
+$primary-color: #4aaaa5;
+$headings: 'Georgia', Times, Times New Roman, serif;
+$paragraphs: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+
+body {
+    background-image: url("/assets/images/memphis-mini.png");
+    background-repeat: repeat;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $primary-color;
+    font-family: $headings;
+}
+
+/* Background pattern from Toptal Subtle Patterns */
