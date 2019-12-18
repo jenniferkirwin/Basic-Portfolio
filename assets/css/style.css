@@ -9,6 +9,7 @@ html {
 body {
   /* Background pattern from Toptal Subtle Patterns */
   background-image: url("../images/memphis-mini.png");
+  height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,7 +41,45 @@ p, a, li {
   color: #777777;
   font-size: 16px;
   line-height: 1.6;
+}
+
+p {
   margin: 0 0 10px 0;
+}
+
+/* --------------------------------------------------------- */
+/* Overall Grid Structure */
+/* --------------------------------------------------------- */
+body {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  height: 100%;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "nav" "section" "footer";
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+}
+
+nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: nav;
+}
+
+section {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: section;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
 }
 
 /* --------------------------------------------------------- */
@@ -88,14 +127,15 @@ nav {
   padding: 0 30px 0 30px;
 }
 
-.title {
+.title a:link, .title a:visited, .title a:active {
   font-family: "Georgia", Times, Times New Roman, serif;
   color: #ffffff;
   background-color: #4aaaa5;
-  padding: 25px;
   display: inline-block;
   font-weight: bold;
   font-size: 36px;
+  text-decoration: none;
+  padding: 5px 25px;
 }
 
 /* --------------------------------------------------------- */
@@ -127,7 +167,6 @@ img.profile-pic {
 /* Footer */
 /* --------------------------------------------------------- */
 footer {
-  padding: 25px;
   margin: 25px 0 0 0;
   border-top: 5px solid #4aaaa5;
   background-color: #666666;
@@ -137,5 +176,6 @@ footer {
 
 footer p {
   color: #ffffff;
+  padding: 25px;
 }
 /*# sourceMappingURL=style.css.map */
