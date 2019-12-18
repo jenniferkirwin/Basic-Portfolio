@@ -1,15 +1,139 @@
-$primary-color: #4aaaa5;
+$color-1: #4aaaa5;
+$color-2: #777777;
+$color-3: #666666;
+
+$white: #ffffff;
 $headings: 'Georgia', Times, Times New Roman, serif;
 $paragraphs: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+$padding: 25px;
+
+/* --------------------------------------------------------- */
+/* General Styles */
+/* --------------------------------------------------------- */
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+  }
 
 body {
-    background-image: url("/assets/images/memphis-mini.png");
-    background-repeat: repeat;
+    /* Background pattern from Toptal Subtle Patterns */
+    background-image: url("../images/memphis-mini.png");
+
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: $primary-color;
+    color: $color-1;
     font-family: $headings;
+    border-bottom: 2px solid #cccccc;
 }
 
-/* Background pattern from Toptal Subtle Patterns */
+h1 {
+    font-size: 48px;
+    margin: 0 0 $padding 0;
+    padding: 0 0 $padding 0;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4, h5, h6 {
+    font-size: 18px;
+}
+
+p, a, li {
+    font-family: $paragraphs;
+    color: $color-2;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 10px 0;
+}
+
+/* --------------------------------------------------------- */
+/* Navigation */
+/* --------------------------------------------------------- */
+
+nav {
+    display: grid;
+    grid-template-columns: auto 400px 560px auto;
+    align-items: center;
+    background-color: $white;
+    margin: 0 0 $padding 0;
+    border-bottom: 2px solid #cccccc;
+}
+
+.nav-list {
+    justify-self: end;
+    li {
+        list-style-type: none;
+        display: inline;
+        padding: 0 0 0 30px;  
+        font-family: $headings;
+        font-size: 18px;         
+        a:link, a:active, a:visited {
+            text-decoration: none;
+            -webkit-transition: all .3s ease; /* Safari prior 6.1 */
+            transition: all .3s ease;
+        }
+        a:hover {
+            color: $color-1;
+        }
+    }
+    li:not(:last-child) {
+        border-right: 1px solid $color-2;
+        padding: 0 30px 0 30px;
+    }
+}
+
+.title {
+    font-family: $headings;
+    color: $white;
+    background-color: $color-1;
+    padding: $padding;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+/* --------------------------------------------------------- */
+/* Body */
+/* --------------------------------------------------------- */
+
+section {
+    display: grid;
+    grid-template-columns: auto 960px auto;
+    align-items: center;
+}
+
+.grid-item {
+    background-color: $white;
+    padding: $padding;
+}
+
+img.profile-pic {
+    max-height: 300px;
+    float: left;
+    padding: 0 $padding $padding 0;
+    position: relative;
+}
+
+/* --------------------------------------------------------- */
+/* Footer */
+/* --------------------------------------------------------- */
+
+footer {
+    padding: $padding;
+    margin: $padding 0 0 0;
+    border-top: 5px solid $color-1;
+    background-color: $color-3;
+    text-align: center;
+    width: 100%;
+    p {
+        color: $white;
+    }
+}
