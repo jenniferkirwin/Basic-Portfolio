@@ -1,8 +1,11 @@
-$color-1: #4aaaa5;
-$color-2: #777777;
-$color-3: #666666;
 
+$color-1: #4aaaa5; /* Teal color (used for headings and backgrounds) */
+$color-2: #777777; /* Paragraph and body text color */
+$color-3: #666666; /* Footer background color */
+$color-4: #cccccc; /* Main header border */
+$color-5: #dddddd; /* Main content border */
 $white: #ffffff;
+
 $headings: 'Georgia', Times, Times New Roman, serif;
 $paragraphs: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 $padding: 25px;
@@ -26,7 +29,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     color: $color-1;
     font-family: $headings;
-    border-bottom: 2px solid #cccccc;
+    border-bottom: 2px solid $color-4;
 }
 
 h1 {
@@ -47,7 +50,7 @@ h4, h5, h6 {
     font-size: 18px;
 }
 
-p, a, li {
+p, a, li, label, input, textarea {
     font-family: $paragraphs;
     color: $color-2;
     font-size: 16px;
@@ -60,6 +63,33 @@ p {
 
 img {
     max-width: 100%;
+}
+
+label, input {
+    display: block;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    border: 1px solid $color-5;
+    margin-bottom: $padding/2;    
+    padding: 0 $padding/4;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    background-color: $color-1;
+    color: $white;
+    border: none;    
+    padding: 10px $padding;
+}
+
+div {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* --------------------------------------------------------- */
@@ -102,7 +132,7 @@ nav {
     align-items: center;
     background-color: $white;
     margin: 0 0 $padding 0;
-    border-bottom: 2px solid #cccccc;
+    border-bottom: 2px solid $color-4;
 }
 
 .nav-list {
@@ -154,6 +184,7 @@ section {
 .grid-item {
     background-color: $white;
     padding: $padding;
+    border: 1px solid $color-5;
 }
 
 img.profile-pic {
@@ -161,6 +192,25 @@ img.profile-pic {
     float: left;
     padding: 0 $padding $padding 0;
     position: relative;
+}
+
+/* --------------------------------------------------------- */
+/* Portfolio Styles */
+/* --------------------------------------------------------- */
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    grid-gap: $padding;
+}
+.portfolio-card h2 {
+    border: none;
+    color: $white;
+    background-color: $color-1;
+    text-align: center;
+    font-size: 24px;
+    padding: $padding / 2;
 }
 
 /* --------------------------------------------------------- */
