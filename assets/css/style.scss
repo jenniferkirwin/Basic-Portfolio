@@ -17,6 +17,7 @@ $padding: 25px;
 html {
     height: 100%;
     scroll-behavior: smooth;
+    margin-left: calc(100vw - 100%);
   }
 
 body {
@@ -204,13 +205,30 @@ img.profile-pic {
     align-items: center;
     grid-gap: $padding;
 }
-.portfolio-card h2 {
-    border: none;
-    color: $white;
-    background-color: $color-1;
-    text-align: center;
-    font-size: 24px;
-    padding: $padding / 2;
+.portfolio-card {
+    position: relative;
+    h2 {
+        border: none;
+        color: $white;
+        background-color: $color-1;
+        text-align: center;
+        font-size: 24px;
+        padding: $padding / 2;
+        position: absolute;
+        bottom: 25px;
+        width: 100%;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    a:link, a:visited, a:active {
+        text-decoration: none;
+        -webkit-transition: all .3s ease; /* Safari prior 6.1 */
+        transition: all .3s ease;
+    }
+    a:hover {
+        opacity: .5;
+    }
 }
 
 /* --------------------------------------------------------- */
@@ -222,7 +240,6 @@ footer {
     border-top: 5px solid $color-1;
     background-color: $color-3;
     text-align: center;
-    width: 100%;
     p {
         color: $white;
         padding: $padding;

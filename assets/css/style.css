@@ -9,6 +9,7 @@
 html {
   height: 100%;
   scroll-behavior: smooth;
+  margin-left: calc(100vw - 100%);
 }
 
 body {
@@ -212,6 +213,10 @@ img.profile-pic {
   grid-gap: 25px;
 }
 
+.portfolio-card {
+  position: relative;
+}
+
 .portfolio-card h2 {
   border: none;
   color: #ffffff;
@@ -219,6 +224,22 @@ img.profile-pic {
   text-align: center;
   font-size: 24px;
   padding: 12.5px;
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.portfolio-card a:link, .portfolio-card a:visited, .portfolio-card a:active {
+  text-decoration: none;
+  -webkit-transition: all .3s ease;
+  /* Safari prior 6.1 */
+  transition: all .3s ease;
+}
+
+.portfolio-card a:hover {
+  opacity: .5;
 }
 
 /* --------------------------------------------------------- */
@@ -229,7 +250,6 @@ footer {
   border-top: 5px solid #4aaaa5;
   background-color: #666666;
   text-align: center;
-  width: 100%;
 }
 
 footer p {
