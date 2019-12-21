@@ -157,8 +157,8 @@ nav {
   color: #4aaaa5;
 }
 
-.nav-list li:not(:last-child) {
-  border-right: 1px solid #777777;
+.nav-list li:last-child {
+  border-right: 0px solid #777777;
   padding: 0 30px 0 30px;
 }
 
@@ -193,9 +193,9 @@ section {
 }
 
 img.profile-pic {
-  max-height: 300px;
+  max-height: 250px;
   float: left;
-  padding: 0 25px 25px 0;
+  padding: 0 25px 12.5px 0;
   position: relative;
 }
 
