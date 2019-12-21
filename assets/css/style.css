@@ -141,9 +141,10 @@ nav {
 .nav-list li {
   list-style-type: none;
   display: inline;
-  padding: 0 0 0 30px;
+  padding: 0 30px 0 30px;
   font-family: "Georgia", Times, Times New Roman, serif;
   font-size: 18px;
+  border-right: 1px solid #777777;
 }
 
 .nav-list li a:link, .nav-list li a:active, .nav-list li a:visited {
@@ -159,7 +160,7 @@ nav {
 
 .nav-list li:last-child {
   border-right: 0px solid #777777;
-  padding: 0 30px 0 30px;
+  padding: 0 0 0 30px;
 }
 
 .title a:link, .title a:visited, .title a:active {
